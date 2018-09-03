@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<!-- Meta Tag -->
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Abstract Management System</title>
+		<!-- External CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+		<!-- Custom CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body data-spy="scroll" data-target=".navbar-fixed-top">
+		<!-- Start Preloader Area-->
+		<div class="preloader-area">
+			<div class="sk-cube-grid">
+				<div class="sk-cube sk-cube1"></div>
+				<div class="sk-cube sk-cube2"></div>
+				<div class="sk-cube sk-cube3"></div>
+				<div class="sk-cube sk-cube4"></div>
+				<div class="sk-cube sk-cube5"></div>
+				<div class="sk-cube sk-cube6"></div>
+				<div class="sk-cube sk-cube7"></div>
+				<div class="sk-cube sk-cube8"></div>
+				<div class="sk-cube sk-cube9"></div>
+			</div>
+		</div>
+		<!--/End Preloader Area-->
+		<!-- Navbar -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav-collapse" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<!-- <a class="navbar-brand" href="index-slider.html"><img src="assets/images/header/logo.png" alt="logo"></a> -->
+				</div>
+				<div class="collapse navbar-collapse" id="main-nav-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a href="#home">Home</a></li>
+						<li><a class="smoth-scroll" href="#about-us">Abstracts</a></li>
+						<li>
+							<div class="button-group" style="margin-top: 0px;">
+								<a type="button" data-toggle="modal" class="btn btn-normal-border" href="#speakerLogin">LOGIN</a>
+							</div>	
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- /End Navbar -->
+		<!-- Start Header -->
+		<div id="home" class="welcome-slider-area">
+			<div class="parallax" style="background-image:url(assets/images/slider/img/slider-1.jpg)">
+				<div class="slider-title">
+					<div class="table-cell">
+						<h2 class="slider-title-animation">ABSTRACT <span>MANAGAMENT</span></h2>
+						<p class="slider-animation-up">Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
+							Lorem Ipsum has been the industry's standard . 
+						</p>
+						<div class="button-group slider-animation-up">
+							<a class="btn btn-normal-border" href="#contacts">SUBMIT ABSTRACT</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/End Header -->
+		<!-- Footer top Area -->
+		<section id="contacts" class="section-padding">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="section-title wow fadeInDown">
+							<h2>Submit <span > ABSTRACT</span ></h2>
+							<div class="border-line">
+								<span class="border-box"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<div class="footer-single-contact">
+							<div class="contact-form">
+								<form id="contact-form" autocomplete="off" method="post" enctype="multipart/form-data" action="./backend/submitAbstract.php">
+									<div class="row">
+										<div class="form-group col-md-2">
+											<input type="text" name="title" class="form-control pl-icon" id="first-name" placeholder="&#xf2c0; Title" required />
+										</div>
+										<div class="form-group col-md-6">
+											<input type="text" name="fullname" class="form-control pl-icon" id="first-name" placeholder="&#xf2c0; Full Name" required />
+										</div>
+										<div class="form-group col-md-4">
+											<select name="sex" class="form-control pl-icon" id="">
+												<option value="">--select sex--</option>
+												<option>Male</option>
+												<option>Female</option>
+											</select>
+										</div>
+										<div class="form-group col-md-12">
+											<textarea rows="3" name="address" class="form-control pl-icon" id="description" placeholder="&#xf015; Contact Address" required ></textarea>
+										</div>
+										<div class="form-group col-md-6">
+											<input type="email" name="email" class="form-control pl-icon" id="email" placeholder="&#xf003; E-mail Address" required />
+										</div>
+										<div class="form-group col-md-6">
+											<input type="text" name="phoneNumber" class="form-control pl-icon" id="email" placeholder="&#xf095; Phone Number" required />
+										</div>
+										
+										<div class="form-group col-md-12">
+											<label for="image" class="btn btn-info selectedImage">Upload Image</label>
+											<input type="file" name="image" class="form-control" id="image" required style="visibility: hidden; margin-top: -30px;" />
+										</div>
+										<div class="form-group col-md-12">
+											<input type="text" name="abstractTitle" class="form-control pl-icon" id="subject" placeholder="&#xf040; Abstract title" required />
+										</div>
+										<div class="form-group col-md-12">
+											<label for="abstract" class="btn btn-info selectedAbstract">Upload Abstract</label>
+											<input type="file" name="abstract" class="form-control" id="abstract" required style="visibility: hidden; margin-top: -30px;" />
+										</div>
+
+								
+										
+										<div class="col-md-12">
+											<div class="actions wow fadeIn" data-wow-delay=".4s">
+												<input type="submit" value="SUBMIT" name="submitAbstract" id="submitButton" class="btn btn-lg contact-btn" title="Submit Your Abstract!">
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /End Footer top Area -->
+		<!-- footer Area -->
+		<footer id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="footer-buttom">
+							<p>Copyright @ 2018, System Analysis and Design group 4</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- /End Footer Area -->
+		<!-- /End Switcher Design Area -->
+		<!-- jQuery js -->
+		<script src="assets/js/jquery.min.js"></script>
+		<!-- BootStrap js -->
+		<script src="assets/js/bootstrap.min.js"></script>
+		<!-- Wow js -->
+		<script src="assets/js/wow.min.js"></script>
+		<script src="assets/js/jquery.magnific-popup.min.js"></script>
+		<!-- Main Custom Js -->
+		<script src="assets/js/custom.js"></script>
+		<script>
+			$('#image').on('change', function(e){
+				$('.selectedImage').html(e.target.files[0].name);
+			});
+
+			$('#abstract').on('change', function(e){
+				$('.selectedAbstract').html(e.target.files[0].name);
+			});
+
+		</script>
+	</body>
+</html>
